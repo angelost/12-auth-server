@@ -95,17 +95,17 @@ const loginUsuario = async (req, res = response ) => {
             msg: 'Hable con el administrador'
         });
     }
-
-
-
     
 }
 
 const revalidarToken = (req, res = response ) => {
 
+    const { uid, name } = req;
+
     return res.json({
         ok: true,
-        msg: 'Renew'
+        uid,
+        name        
     });
 }
 
